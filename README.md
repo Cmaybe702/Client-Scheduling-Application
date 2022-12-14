@@ -1,6 +1,6 @@
 # Client-Scheduling-Application
 
-Java client scheduling application using a MySQL database. Connected via JDBC
+Java client scheduling application using a MySQL database. Connected via JDBC. Provides internationalization for French users
 
 Purpose of application: 
 1. To schedule maintain and cancel appointments for customers of the business 
