@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="750.0" style="-fx-background-color: #222429#222429;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomersByDivisionController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label fx:id="CustomersByDivisionLabel" alignment="TOP_CENTER" prefHeight="82.0" prefWidth="819.0" text="Customers by Division" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10.0" prefWidth="500.0" style="-fx-background-color: #42c43b;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="150.0" right="150.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <Label fx:id="DivisionLabel" alignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <ScrollPane maxHeight="370.0" maxWidth="700.0" prefHeight="370.0" prefWidth="700.0" VBox.vgrow="NEVER">
+               <content>
+                  <TableView fx:id="CustomerDisplay" maxHeight="370.0" maxWidth="700.0" prefHeight="370.0" prefWidth="700.0">
+                    <columns>
+                        <TableColumn fx:id="CustomerIDColumn" prefWidth="65.0" text="ID" />
+                      <TableColumn fx:id="CustomerNameColumn" prefWidth="130.0" text="Name" />
+                      <TableColumn fx:id="CustomerAddressColumn" prefWidth="180.0" text="Address" />
+                        <TableColumn fx:id="CustomerPostalColumn" minWidth="0.0" prefWidth="140.0" text="Postal Code" />
+                        <TableColumn fx:id="CustomerPhoneColumn" minWidth="0.0" prefWidth="160.0" text="Phone Number" />
+                    </columns>
+                  </TableView>
+               </content>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </ScrollPane>
+            <ButtonBar buttonMinWidth="80.0" maxWidth="809.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="809.0">
+              <buttons>
+                  <Button fx:id="ExitButton" mnemonicParsing="false" onAction="#OnActionReturnToReports" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #42c43b #42c43b;" text="Exit">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+              </buttons>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </ButtonBar>
+            <Label fx:id="LocationLabel" alignment="CENTER" prefHeight="32.0" prefWidth="800.0" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/landmark-gdfccb0230_640.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

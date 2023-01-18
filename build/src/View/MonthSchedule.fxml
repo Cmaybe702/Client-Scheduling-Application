@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="950.0" style="-fx-background-color: #222429#222429;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MonthScheduleController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label fx:id="ScheduleLabel" alignment="TOP_CENTER" prefHeight="82.0" prefWidth="819.0" text="Schedule" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10.0" prefWidth="500.0" style="-fx-background-color: #42c43b;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="150.0" right="150.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="700.0" spacing="30.0">
+               <children>
+                  <DatePicker fx:id="ScheduleDatePicker" onAction="#OnActionChangeMonth" prefWidth="150.0" />
+                  <RadioButton fx:id="WeekViewRadio" mnemonicParsing="false" onAction="#OnActionChangeToWeek" text="WeekView" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="MonthViewRadio" mnemonicParsing="false" selected="true" text="MonthView" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <ScrollPane maxHeight="450.0" maxWidth="850.0" prefHeight="420.0" prefWidth="850.0" VBox.vgrow="NEVER">
+               <content>
+                  <TableView fx:id="MonthDisplay" maxHeight="450.0" maxWidth="860.0" prefHeight="450.0" prefWidth="850.0">
+                    <columns>
+                        <TableColumn fx:id="WeekColumn" prefWidth="90.0" text="Week" />
+                        <TableColumn fx:id="SundayColumn" prefWidth="110.0" text="Sunday" />
+                      <TableColumn fx:id="MondayColumn" prefWidth="110.0" text="Monday" />
+                      <TableColumn fx:id="TuesdayColumn" prefWidth="110.0" text="Tuesday" />
+                        <TableColumn fx:id="WednesdayColumn" minWidth="0.0" prefWidth="110.0" text="Wednesday" />
+                        <TableColumn fx:id="ThursdayColumn" minWidth="0.0" prefWidth="110.0" text="Thursday" />
+                        <TableColumn fx:id="FridayColumn" minWidth="0.0" prefWidth="110.0" text="Friday" />
+                        <TableColumn fx:id="SaturdayColumn" minWidth="0.0" prefWidth="110.0" text="Saturday" />
+                    </columns>
+                  </TableView>
+               </content>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </ScrollPane>
+            <ButtonBar buttonMinWidth="80.0" maxWidth="870.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="870.0">
+              <buttons>
+                  <Button fx:id="InfoButton" mnemonicParsing="false" onAction="#OnActionGetInfo" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #42c43b #42c43b;" text="Info">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AllAppointmentsButton" mnemonicParsing="false" onAction="#OnActionGetAll" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #42c43b #42c43b;" text="Appointments">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+                <Button fx:id="AddAppointment" mnemonicParsing="false" onAction="#OnActionNewAppointment" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #42c43b #42c43b;" text="Add">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ExitButton" mnemonicParsing="false" onAction="#OnActionReturnToLaunch" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #42c43b #42c43b;" text="Exit">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+              </buttons>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </ButtonBar>
+            <Label fx:id="LocationLabel" alignment="CENTER" prefHeight="32.0" prefWidth="800.0" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/landmark-gdfccb0230_640.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
