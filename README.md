@@ -1,11 +1,15 @@
 # Client-Scheduling-Application
 
-Java client scheduling application using a MySQL database. Connected via JDBC. Provides internationalization for French users
+For developers:
+Java client scheduling application using a MySQL database. Other DB products can be used, please see JDBC directory for configuration information.
+Provides internationalization for French users. To add additional locales please add a corresponding properties file to the Resources directory.
 
 Purpose of application: 
 1. To schedule maintain and cancel appointments for customers of the business 
 2. To add, update, and remove relevant customer information
 3. To provide reporting to identify opportunities or get information to employees of the business
+
+Created with:
 
 IDE:
 NetBeans 12.6
@@ -19,7 +23,7 @@ JavaFX SDK:
 MySQL connector driver version:
 8.0.28
 
-How to run application:
+User guide:
 1. Log into application using valid credentials
 2. From the main menu select Clients
 	- this provides you with a table of all current customers
