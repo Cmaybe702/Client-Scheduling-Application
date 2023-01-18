@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #222429#222429;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label fx:id="ReportsLabel" alignment="TOP_CENTER" prefHeight="82.0" prefWidth="819.0" text="Reporting" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10.0" prefWidth="300.0" style="-fx-background-color: #42c43b;">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <VBox alignment="CENTER" prefHeight="320.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label fx:id="ReportTypeLabel" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" text="Report Type" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="ReportDropDown" onAction="#OnActionFillSecondLevel" prefWidth="250.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label fx:id="SecondLevelLabel" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="SecondLevelDropDown" prefWidth="250.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label fx:id="StartDateLabel" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" text="Start Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="StartDatePicker" prefWidth="200.0" />
+                  <Label fx:id="EndDateLabel" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" text="End Date" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="EndDatePicker" prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <ButtonBar buttonMinWidth="80.0" maxWidth="500.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="500.0">
+              <buttons>
+                <Button fx:id="RunButton" mnemonicParsing="false" onAction="#OnActionRunReport" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #42c43b #42c43b;" text="Run">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ExitButton" mnemonicParsing="false" onAction="#OnActionReturnToLaunch" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #42c43b #42c43b;" text="Exit">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+              </buttons>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="90.0" top="10.0" />
+               </VBox.margin>
+            </ButtonBar>
+            <Label fx:id="LocationLabel" alignment="CENTER" prefHeight="32.0" prefWidth="800.0" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/landmark-gdfccb0230_640.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
