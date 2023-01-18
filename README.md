@@ -1,6 +1,7 @@
 # Client-Scheduling-Application
 
 For developers:
+
 Java client scheduling application using a MySQL database. Other DB products can be used, please see JDBC directory for configuration information.
 Provides internationalization for French users. To add additional locales please add a corresponding properties file to the Resources directory.
 
